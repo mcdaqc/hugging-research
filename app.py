@@ -768,7 +768,7 @@ Hugging Research finds Hugging Face models, datasets, and Spaces with direct lin
 - Web search + basic navigation (DuckDuckGo `web_search`, `visit`, `page_up/down`, `find`, `archive_search`)
 
 **Model configuration:**
-- Default: Qwen/Qwen3-Coder-30B-A3B-Instruct (HF Inference API)
+- Default: Qwen/Qwen3-Coder-480B-A35B-Instruct (HF Inference API)
 - Optional: Ollama/local via `.env`
 
 **How to use:**
@@ -947,7 +947,7 @@ Hugging Research finds Hugging Face models, datasets, and Spaces with direct lin
 - Web search + basic navigation (DuckDuckGo `web_search`, `visit`, `page_up/down`, `find`, `archive_search`)
 
 **Model configuration:**
-- Default: Qwen/Qwen3-Coder-30B-A3B-Instruct (HF Inference API)
+- Default: Qwen/Qwen3-Coder-480B-A35B-Instruct (HF Inference API)
 - Optional: Ollama/local via `.env`
 
 **How to use:**

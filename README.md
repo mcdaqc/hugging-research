@@ -29,7 +29,7 @@ pip install -r requirements.txt
 cp .env.template .env
 # Edit .env and set:
 # HF_TOKEN=hf_xxx                # only for the inference model
-# MODEL_ID=Qwen/Qwen3-Coder-30B-A3B-Instruct  # optional
+# MODEL_ID=Qwen/Qwen3-Coder-480B-A35B-Instruct  # optional
 ```
 
 3) Run the app
@@ -45,7 +45,7 @@ python app.py
 
 ## Configuration
 - `HF_TOKEN`: used for the inference model (agent). Tools are anonymous/read‑only.
-- `MODEL_ID`: default `Qwen/Qwen3-Coder-30B-A3B-Instruct`.
+- `MODEL_ID`: default `Qwen/Qwen3-Coder-480B-A35B-Instruct`.
 
 
 

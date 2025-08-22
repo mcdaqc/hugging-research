@@ -20,7 +20,7 @@ pip install -r requirements.txt
 Create `.env` (token is only for the inference model; tools are anonymous):
 ```ini
 HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-MODEL_ID=Qwen/Qwen3-Coder-30B-A3B-Instruct
+MODEL_ID=Qwen/Qwen3-Coder-480B-A35B-Instruct
 ```
 
 ## Run
