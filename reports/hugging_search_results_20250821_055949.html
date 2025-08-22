@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hugging Search — Findings</title>
+  <style>
+    :root { --bg:#0b0d12; --fg:#e6e9ef; --muted:#9aa4b2; --card:#121621; --accent:#5ac8fa; }
+    body { background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; margin:0; padding:24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom: 12px; }
+    .title { font-size: 22px; margin: 0; }
+    .subtitle { color: var(--muted); }
+    .stats { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 18px; }
+    .stat-chip { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; font-size: 12px; color: var(--muted); }
+    h2 { font-size: 16px; margin: 18px 0 8px; color: var(--accent); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 12px; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 12px; }
+    .card-title { font-weight: 600; margin-bottom: 4px; overflow-wrap:anywhere; }
+    .card-subtitle { color: var(--muted); font-size: 12px; }
+    .answer { line-height:1.55; color:#d2d7df; }
+    .card-actions button { background:#1f2937;color:#e5e7eb;border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:12px; }
+    .fav { width:14px; height:14px; vertical-align:middle; margin-right:6px; border-radius:4px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin: 8px 0 4px; }
+    .filter-btn { background:#111827;color:#cbd5e1;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header"> 
+      <div>
+        <div class="title">Hugging Search — Findings</div>
+        <div class="subtitle">Query: I'm trying to finetune my own multimodal model. I don’t want a very large model—just a small one that I can run locally. Which lightweight models would you recommend, and are there any guides, courses, or published papers on similar approaches that I could use?</div>
+      </div>
+    </div>
+    <div class="stats"><div class=stat-chip>Models: 5</div>
+<div class=stat-chip>Datasets: 0</div>
+<div class=stat-chip>Spaces: 0</div>
+<div class=stat-chip>Papers: 0</div>
+<div class=stat-chip>Blogs/Docs: 1</div>
+<div class=stat-chip>Repos: 0</div>
+<div class=stat-chip>Videos: 0</div>
+<div class=stat-chip>News: 0</div></div>
+    <div class="filters">
+      <button class="filter-btn" onclick="filterBy('all')">All</button>
+      <button class="filter-btn" onclick="filterBy('models')">Models</button>
+      <button class="filter-btn" onclick="filterBy('datasets')">Datasets</button>
+      <button class="filter-btn" onclick="filterBy('spaces')">Spaces</button>
+      <button class="filter-btn" onclick="filterBy('papers')">Papers</button>
+      <button class="filter-btn" onclick="filterBy('blogs')">Blogs/Docs</button>
+      <button class="filter-btn" onclick="filterBy('repos')">Repos</button>
+      <button class="filter-btn" onclick="filterBy('videos')">Videos</button>
+      <button class="filter-btn" onclick="filterBy('news')">News</button>
+    </div>
+    <section><h2>Summary</h2><div id="summary_md" class="answer"></div></section>
+    <section data-key='models'><h2>Models</h2><div class=cards><div class=card data-cat='models'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/microsoft/Phi-4-multimodal-instruct' target=_blank rel=noopener>https://huggingface.co/microsoft/Phi-4-multimodal-instruct</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/microsoft/Phi-4-multimodal-instruct')">Copy</button></div></div>
+<div class=card data-cat='models'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/nomic-ai/nomic-embed-multimodal-3b' target=_blank rel=noopener>https://huggingface.co/nomic-ai/nomic-embed-multimodal-3b</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/nomic-ai/nomic-embed-multimodal-3b')">Copy</button></div></div>
+<div class=card data-cat='models'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/blog/fine-tuning-tutorial' target=_blank rel=noopener>https://huggingface.co/blog/fine-tuning-tutorial</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/blog/fine-tuning-tutorial')">Copy</button></div></div>
+<div class=card data-cat='models'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/microsoft/Phi-4-multimodal-instruct' target=_blank rel=noopener>https://huggingface.co/microsoft/Phi-4-multimodal-instruct</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/microsoft/Phi-4-multimodal-instruct')">Copy</button></div></div>
+<div class=card data-cat='models'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/blog/fine-tuning-tutorial' target=_blank rel=noopener>https://huggingface.co/blog/fine-tuning-tutorial</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/blog/fine-tuning-tutorial')">Copy</button></div></div></div></section>
+    
+    
+    
+    <section data-key='blogs'><h2>Blogs / Docs</h2><div class=cards><div class=card data-cat='blogs'><div class=card-title> <img class="fav" src="https://www.google.com/s2/favicons?sz=32&domain=huggingface.co" alt=""/> <a href='https://huggingface.co/spaces' target=_blank rel=noopener>https://huggingface.co/spaces</a></div><div class=card-subtitle>huggingface.co</div><div class=card-actions><button onclick="copyLink('https://huggingface.co/spaces')">Copy</button></div></div></div></section>
+    
+    
+    
+    
+  </div>
+  <script>
+    const raw = "**Final answer:**\nWe've explored several options for fine-tuning lightweight multimodal models that work well for local execution and found promising candidates.\n### Recommended Lightweight Models:\n1. **[microsoft/Phi-4-multimodal-instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct)**\n   - Supports speech recognition, translation, summarization, and visual question answering\n   - Comes with ready-made scripts to help you get started with fine-tuning (`sample_finetune_speech.py`, `sample_finetune_vision.py`)\n   - Well-documented with examples on Hugging Face\n2. **[nomic-ai/nomic-embed-multimodal-3b](https://huggingface.co/nomic-ai/nomic-embed-multimodal-3b)**\n   - Specifically designed for multimodal embeddings with a manageable 3B parameters\n   - Uses Qwen2.5-VL as the base, making it more efficient than some larger models\n   - Optimized for visual-document retrieval tasks\n### Effective Approaches and Resources for Local Fine-Tuning:\n- **Lightweight Adapters:** Techniques like LoRA (Low-Rank Adaptation) can help fine-tune multimodal models effectively without full retraining\n- **Modular Training:** Breaking down training into stages can improve efficiency and model performance\n- **Efficient Methods:** Techniques derived from recent research such as stage-wise training for lightweight models\n### Additional Resources:\n- [Hugging Face Blog: Fine-tuning Guide](https://huggingface.co/blog/fine-tuning-tutorial)\n- [Hugging Face Spaces: Model Training Examples](https://huggingface.co/spaces)\n- Academic papers discussing techniques for \"lightweight multimodal model training\"\nWe recommend starting with **Phi-4-multimodal-instruct** for its broad functionality and strong support.\n### Next Steps:\n1. Try out the [Phi-4-multimodal-instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct) model with its sample fine-tuning scripts to see how it works for your specific use case.\n2. Check out the [Hugging Face Fine-tuning Guide](https://huggingface.co/blog/fine-tuning-tutorial) for detailed instructions on adapting models to your data.\n3. Explore research papers like \"Mini-Monkey\" or \"Lightweight Multimodal Large Language Models\" to understand advanced training strategies for smaller models.\nIt's always fun to start local fine-tuning\u2014happy building! \ud83d\ude80";
+    const safeHtml = DOMPurify.sanitize(marked.parse(raw));
+    document.getElementById('summary_md').innerHTML = safeHtml;
+    function copyLink(url){ try{navigator.clipboard && navigator.clipboard.writeText(url);}catch(e){} }
+    function filterBy(cat){
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(c => { const k = c.getAttribute('data-cat'); c.style.display = (cat==='all' || k===cat) ? '' : 'none'; });
+    }
+  </script>
+</body>
+</html>

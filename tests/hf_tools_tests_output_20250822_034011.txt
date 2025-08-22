@@ -1,0 +1,2425 @@
+Hugging Face Tools Test Run — 20250822_034011
+================================================================================
+
+=== Running test_hf_models_search.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_models_search.py
+--- INPUT (snippet) ---
+tool.forward(
+        query="stable diffusion",
+        task="text-to-image",
+        sort="downloads",
+        direction="descending",
+        limit=5,
+    )
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [
+    {
+      "type": "model",
+      "id": "stabilityai/stable-diffusion-xl-base-1.0",
+      "owner": "stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+      "description": "",
+      "tags": [
+        "diffusers",
+        "onnx",
+        "safetensors",
+        "text-to-image",
+        "stable-diffusion",
+        "arxiv:2307.01952",
+        "arxiv:2211.01324",
+        "arxiv:2108.01073",
+        "arxiv:2112.10752",
+        "license:openrail++",
+        "autotrain_compatible",
+        "endpoints_compatible",
+        "diffusers:StableDiffusionXLPipeline",
+        "region:us"
+      ],
+      "task": "text-to-image",
+      "likes": 6862,
+      "downloads": 2281071,
+      "updatedAt": null,
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "model",
+      "id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+      "owner": "stable-diffusion-v1-5",
+      "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5",
+      "description": "",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "stable-diffusion",
+        "stable-diffusion-diffusers",
+        "text-to-image",
+        "arxiv:2207.12598",
+        "arxiv:2112.10752",
+        "arxiv:2103.00020",
+        "arxiv:2205.11487",
+        "arxiv:1910.09700",
+        "license:creativeml-openrail-m",
+        "autotrain_compatible",
+        "endpoints_compatible",
+        "diffusers:StableDiffusionPipeline",
+        "region:us"
+      ],
+      "task": "text-to-image",
+      "likes": 755,
+      "downloads": 2789469,
+      "updatedAt": null,
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "model",
+      "id": "stabilityai/stable-diffusion-xl-refiner-1.0",
+      "owner": "stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0",
+      "description": "",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "stable-diffusion",
+        "image-to-image",
+        "arxiv:2307.01952",
+        "arxiv:2211.01324",
+        "arxiv:2108.01073",
+        "arxiv:2112.10752",
+        "license:openrail++",
+        "diffusers:StableDiffusionXLImg2ImgPipeline",
+        "region:us"
+      ],
+      "task": "image-to-image",
+      "likes": 1953,
+      "downloads": 544617,
+      "updatedAt": null,
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "model",
+      "id": "stabilityai/stable-diffusion-3.5-large",
+      "owner": "stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+      "description": "",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "text-to-image",
+        "stable-diffusion",
+        "en",
+        "arxiv:2403.03206",
+        "license:other",
+        "diffusers:StableDiffusion3Pipeline",
+        "region:us"
+      ],
+      "task": "text-to-image",
+      "likes": 3073,
+      "downloads": 82027,
+      "updatedAt": null,
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "model",
+      "id": "stabilityai/stable-video-diffusion-img2vid",
+      "owner": "stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid",
+      "description": "",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "image-to-video",
+        "license:other",
+        "diffusers:StableVideoDiffusionPipeline",
+        "region:us"
+      ],
+      "task": "image-to-video",
+      "likes": 957,
+      "downloads": 46464,
+      "updatedAt": null,
+      "visibility": "public",
+      "access": "accessible"
+    }
+  ],
+  "status": 200,
+  "error": "",
+  "params": {
+    "search": "stable diffusion",
+    "pipeline_tag": "text-to-image",
+    "sort": "downloads",
+    "direction": "descending",
+    "limit": 5
+  }
+}
+--- STDERR ---
+
+[OK] test_hf_models_search.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_model_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_model_info.py
+--- INPUT (snippet) ---
+tool.forward(repo_id=repo_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {
+    "type": "model",
+    "id": "sentence-transformers/all-MiniLM-L6-v2",
+    "owner": "sentence-transformers",
+    "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+    "description": "",
+    "tags": [
+      "sentence-transformers",
+      "pytorch",
+      "tf",
+      "rust",
+      "onnx",
+      "safetensors",
+      "openvino",
+      "bert",
+      "feature-extraction",
+      "sentence-similarity",
+      "transformers",
+      "en",
+      "dataset:s2orc",
+      "dataset:flax-sentence-embeddings/stackexchange_xml",
+      "dataset:ms_marco",
+      "dataset:gooaq",
+      "dataset:yahoo_answers_topics",
+      "dataset:code_search_net",
+      "dataset:search_qa",
+      "dataset:eli5",
+      "dataset:snli",
+      "dataset:multi_nli",
+      "dataset:wikihow",
+      "dataset:natural_questions",
+      "dataset:trivia_qa",
+      "dataset:embedding-data/sentence-compression",
+      "dataset:embedding-data/flickr30k-captions",
+      "dataset:embedding-data/altlex",
+      "dataset:embedding-data/simple-wiki",
+      "dataset:embedding-data/QQP",
+      "dataset:embedding-data/SPECTER",
+      "dataset:embedding-data/PAQ_pairs",
+      "dataset:embedding-data/WikiAnswers",
+      "arxiv:1904.06472",
+      "arxiv:2102.07033",
+      "arxiv:2104.08727",
+      "arxiv:1704.05179",
+      "arxiv:1810.09305",
+      "license:apache-2.0",
+      "autotrain_compatible",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "task": "sentence-similarity",
+    "likes": 3788,
+    "downloads": 91944061,
+    "updatedAt": "2025-03-06T13:37:44.000Z",
+    "visibility": "public",
+    "access": "accessible",
+    "cardData": {
+      "language": "en",
+      "license": "apache-2.0",
+      "library_name": "sentence-transformers",
+      "tags": [
+        "sentence-transformers",
+        "feature-extraction",
+        "sentence-similarity",
+        "transformers"
+      ],
+      "datasets": [
+        "s2orc",
+        "flax-sentence-embeddings/stackexchange_xml",
+        "ms_marco",
+        "gooaq",
+        "yahoo_answers_topics",
+        "code_search_net",
+        "search_qa",
+        "eli5",
+        "snli",
+        "multi_nli",
+        "wikihow",
+        "natural_questions",
+        "trivia_qa",
+        "embedding-data/sentence-compression",
+        "embedding-data/flickr30k-captions",
+        "embedding-data/altlex",
+        "embedding-data/simple-wiki",
+        "embedding-data/QQP",
+        "embedding-data/SPECTER",
+        "embedding-data/PAQ_pairs",
+        "embedding-data/WikiAnswers"
+      ],
+      "pipeline_tag": "sentence-similarity"
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "1_Pooling/config.json"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "config.json"
+      },
+      {
+        "rfilename": "config_sentence_transformers.json"
+      },
+      {
+        "rfilename": "data_config.json"
+      },
+      {
+        "rfilename": "model.safetensors"
+      },
+      {
+        "rfilename": "modules.json"
+      },
+      {
+        "rfilename": "onnx/model.onnx"
+      },
+      {
+        "rfilename": "onnx/model_O1.onnx"
+      },
+      {
+        "rfilename": "onnx/model_O2.onnx"
+      },
+      {
+        "rfilename": "onnx/model_O3.onnx"
+      },
+      {
+        "rfilename": "onnx/model_O4.onnx"
+      },
+      {
+        "rfilename": "onnx/model_qint8_arm64.onnx"
+      },
+      {
+        "rfilename": "onnx/model_qint8_avx512.onnx"
+      },
+      {
+        "rfilename": "onnx/model_qint8_avx512_vnni.onnx"
+      },
+      {
+        "rfilename": "onnx/model_quint8_avx2.onnx"
+      },
+      {
+        "rfilename": "openvino/openvino_model.bin"
+      },
+      {
+        "rfilename": "openvino/openvino_model.xml"
+      },
+      {
+        "rfilename": "openvino/openvino_model_qint8_quantized.bin"
+      },
+      {
+        "rfilename": "openvino/openvino_model_qint8_quantized.xml"
+      },
+      {
+        "rfilename": "pytorch_model.bin"
+      },
+      {
+        "rfilename": "rust_model.ot"
+      },
+      {
+        "rfilename": "sentence_bert_config.json"
+      },
+      {
+        "rfilename": "special_tokens_map.json"
+      },
+      {
+        "rfilename": "tf_model.h5"
+      },
+      {
+        "rfilename": "tokenizer.json"
+      },
+      {
+        "rfilename": "tokenizer_config.json"
+      },
+      {
+        "rfilename": "train_script.py"
+      },
+      {
+        "rfilename": "vocab.txt"
+      }
+    ]
+  },
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_model_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_datasets_search.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_datasets_search.py
+--- INPUT (snippet) ---
+tool.forward(
+        query="sentiment analysis",
+        tags="language:es",
+        sort="downloads",
+        direction="descending",
+        limit=5,
+    )
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [
+    {
+      "type": "dataset",
+      "id": "Renukswamy/Patent_sentiment_analysis",
+      "owner": "Renukswamy",
+      "url": "https://huggingface.co/Renukswamy/Patent_sentiment_analysis",
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:csv",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "likes": 2,
+      "downloads": 12,
+      "updatedAt": "2021-11-26T09:18:15.000Z",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "dataset",
+      "id": "maydogan/Turkish_SentimentAnalysis_TRSAv1",
+      "owner": "maydogan",
+      "url": "https://huggingface.co/maydogan/Turkish_SentimentAnalysis_TRSAv1",
+      "description": "",
+      "tags": [
+        "task_categories:text-classification",
+        "language:tr",
+        "size_categories:100K<n<1M",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "likes": 6,
+      "downloads": 161,
+      "updatedAt": "2024-10-07T14:16:56.000Z",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "dataset",
+      "id": "winvoker/turkish-sentiment-analysis-dataset",
+      "owner": "winvoker",
+      "url": "https://huggingface.co/winvoker/turkish-sentiment-analysis-dataset",
+      "description": "",
+      "tags": [
+        "task_categories:text-classification",
+        "task_ids:sentiment-classification",
+        "annotations_creators:crowdsourced",
+        "annotations_creators:expert-generated",
+        "language_creators:crowdsourced",
+        "multilinguality:monolingual",
+        "language:tr",
+        "license:cc-by-sa-4.0",
+        "size_categories:100K<n<1M",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "likes": 47,
+      "downloads": 459,
+      "updatedAt": "2023-07-19T13:15:13.000Z",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "dataset",
+      "id": "ramnika003/autotrain-data-sentiment_analysis_project",
+      "owner": "ramnika003",
+      "url": "https://huggingface.co/ramnika003/autotrain-data-sentiment_analysis_project",
+      "description": "",
+      "tags": [
+        "task_categories:text-classification",
+        "region:us"
+      ],
+      "likes": 0,
+      "downloads": 160,
+      "updatedAt": "2022-04-05T09:16:59.000Z",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "dataset",
+      "id": "elmurod1202/uzbek-sentiment-analysis",
+      "owner": "elmurod1202",
+      "url": "https://huggingface.co/elmurod1202/uzbek-sentiment-analysis",
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:text",
+        "modality:image",
+        "modality:text",
+        "library:datasets",
+        "library:mlcroissant",
+        "region:us"
+      ],
+      "likes": 3,
+      "downloads": 236,
+      "updatedAt": "2022-05-11T13:43:59.000Z",
+      "visibility": "public",
+      "access": "accessible"
+    }
+  ],
+  "status": 200,
+  "error": "",
+  "params": {
+    "search": "sentiment analysis",
+    "tags": "language:es",
+    "sort": "downloads",
+    "direction": "descending",
+    "limit": 5
+  }
+}
+--- STDERR ---
+
+[OK] test_hf_datasets_search.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_dataset_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_dataset_info.py
+--- INPUT (snippet) ---
+tool.forward(repo_id=repo_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {
+    "type": "dataset",
+    "id": "nyu-mll/glue",
+    "owner": "nyu-mll",
+    "url": "https://huggingface.co/nyu-mll/glue",
+    "description": "",
+    "tags": [
+      "task_categories:text-classification",
+      "task_ids:acceptability-classification",
+      "task_ids:natural-language-inference",
+      "task_ids:semantic-similarity-scoring",
+      "task_ids:sentiment-classification",
+      "task_ids:text-scoring",
+      "annotations_creators:other",
+      "language_creators:other",
+      "multilinguality:monolingual",
+      "source_datasets:original",
+      "language:en",
+      "license:other",
+      "size_categories:1M<n<10M",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "arxiv:1804.07461",
+      "region:us",
+      "qa-nli",
+      "coreference-nli",
+      "paraphrase-identification"
+    ],
+    "likes": 435,
+    "downloads": 313025,
+    "updatedAt": "2024-01-30T07:41:18.000Z",
+    "visibility": "public",
+    "access": "accessible",
+    "cardData": {
+      "annotations_creators": [
+        "other"
+      ],
+      "language_creators": [
+        "other"
+      ],
+      "language": [
+        "en"
+      ],
+      "license": [
+        "other"
+      ],
+      "multilinguality": [
+        "monolingual"
+      ],
+      "size_categories": [
+        "10K<n<100K"
+      ],
+      "source_datasets": [
+        "original"
+      ],
+      "task_categories": [
+        "text-classification"
+      ],
+      "task_ids": [
+        "acceptability-classification",
+        "natural-language-inference",
+        "semantic-similarity-scoring",
+        "sentiment-classification",
+        "text-scoring"
+      ],
+      "paperswithcode_id": "glue",
+      "pretty_name": "GLUE (General Language Understanding Evaluation benchmark)",
+      "config_names": [
+        "ax",
+        "cola",
+        "mnli",
+        "mnli_matched",
+        "mnli_mismatched",
+        "mrpc",
+        "qnli",
+        "qqp",
+        "rte",
+        "sst2",
+        "stsb",
+        "wnli"
+      ],
+      "tags": [
+        "qa-nli",
+        "coreference-nli",
+        "paraphrase-identification"
+      ],
+      "dataset_info": [
+        {
+          "config_name": "ax",
+          "features": [
+            {
+              "name": "premise",
+              "dtype": "string"
+            },
+            {
+              "name": "hypothesis",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "neutral",
+                    "2": "contradiction"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "test",
+              "num_bytes": 237694,
+              "num_examples": 1104
+            }
+          ],
+          "download_size": 80767,
+          "dataset_size": 237694
+        },
+        {
+          "config_name": "cola",
+          "features": [
+            {
+              "name": "sentence",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "unacceptable",
+                    "1": "acceptable"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 484869,
+              "num_examples": 8551
+            },
+            {
+              "name": "validation",
+              "num_bytes": 60322,
+              "num_examples": 1043
+            },
+            {
+              "name": "test",
+              "num_bytes": 60513,
+              "num_examples": 1063
+            }
+          ],
+          "download_size": 326394,
+          "dataset_size": 605704
+        },
+        {
+          "config_name": "mnli",
+          "features": [
+            {
+              "name": "premise",
+              "dtype": "string"
+            },
+            {
+              "name": "hypothesis",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "neutral",
+                    "2": "contradiction"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 74619646,
+              "num_examples": 392702
+            },
+            {
+              "name": "validation_matched",
+              "num_bytes": 1833783,
+              "num_examples": 9815
+            },
+            {
+              "name": "validation_mismatched",
+              "num_bytes": 1949231,
+              "num_examples": 9832
+            },
+            {
+              "name": "test_matched",
+              "num_bytes": 1848654,
+              "num_examples": 9796
+            },
+            {
+              "name": "test_mismatched",
+              "num_bytes": 1950703,
+              "num_examples": 9847
+            }
+          ],
+          "download_size": 57168425,
+          "dataset_size": 82202017
+        },
+        {
+          "config_name": "mnli_matched",
+          "features": [
+            {
+              "name": "premise",
+              "dtype": "string"
+            },
+            {
+              "name": "hypothesis",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "neutral",
+                    "2": "contradiction"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "validation",
+              "num_bytes": 1833783,
+              "num_examples": 9815
+            },
+            {
+              "name": "test",
+              "num_bytes": 1848654,
+              "num_examples": 9796
+            }
+          ],
+          "download_size": 2435055,
+          "dataset_size": 3682437
+        },
+        {
+          "config_name": "mnli_mismatched",
+          "features": [
+            {
+              "name": "premise",
+              "dtype": "string"
+            },
+            {
+              "name": "hypothesis",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "neutral",
+                    "2": "contradiction"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "validation",
+              "num_bytes": 1949231,
+              "num_examples": 9832
+            },
+            {
+              "name": "test",
+              "num_bytes": 1950703,
+              "num_examples": 9847
+            }
+          ],
+          "download_size": 2509009,
+          "dataset_size": 3899934
+        },
+        {
+          "config_name": "mrpc",
+          "features": [
+            {
+              "name": "sentence1",
+              "dtype": "string"
+            },
+            {
+              "name": "sentence2",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "not_equivalent",
+                    "1": "equivalent"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 943843,
+              "num_examples": 3668
+            },
+            {
+              "name": "validation",
+              "num_bytes": 105879,
+              "num_examples": 408
+            },
+            {
+              "name": "test",
+              "num_bytes": 442410,
+              "num_examples": 1725
+            }
+          ],
+          "download_size": 1033400,
+          "dataset_size": 1492132
+        },
+        {
+          "config_name": "qnli",
+          "features": [
+            {
+              "name": "question",
+              "dtype": "string"
+            },
+            {
+              "name": "sentence",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "not_entailment"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 25612443,
+              "num_examples": 104743
+            },
+            {
+              "name": "validation",
+              "num_bytes": 1368304,
+              "num_examples": 5463
+            },
+            {
+              "name": "test",
+              "num_bytes": 1373093,
+              "num_examples": 5463
+            }
+          ],
+          "download_size": 19278324,
+          "dataset_size": 28353840
+        },
+        {
+          "config_name": "qqp",
+          "features": [
+            {
+              "name": "question1",
+              "dtype": "string"
+            },
+            {
+              "name": "question2",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "not_duplicate",
+                    "1": "duplicate"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 50900820,
+              "num_examples": 363846
+            },
+            {
+              "name": "validation",
+              "num_bytes": 5653754,
+              "num_examples": 40430
+            },
+            {
+              "name": "test",
+              "num_bytes": 55171111,
+              "num_examples": 390965
+            }
+          ],
+          "download_size": 73982265,
+          "dataset_size": 111725685
+        },
+        {
+          "config_name": "rte",
+          "features": [
+            {
+              "name": "sentence1",
+              "dtype": "string"
+            },
+            {
+              "name": "sentence2",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "entailment",
+                    "1": "not_entailment"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 847320,
+              "num_examples": 2490
+            },
+            {
+              "name": "validation",
+              "num_bytes": 90728,
+              "num_examples": 277
+            },
+            {
+              "name": "test",
+              "num_bytes": 974053,
+              "num_examples": 3000
+            }
+          ],
+          "download_size": 1274409,
+          "dataset_size": 1912101
+        },
+        {
+          "config_name": "sst2",
+          "features": [
+            {
+              "name": "sentence",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "negative",
+                    "1": "positive"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 4681603,
+              "num_examples": 67349
+            },
+            {
+              "name": "validation",
+              "num_bytes": 106252,
+              "num_examples": 872
+            },
+            {
+              "name": "test",
+              "num_bytes": 216640,
+              "num_examples": 1821
+            }
+          ],
+          "download_size": 3331080,
+          "dataset_size": 5004495
+        },
+        {
+          "config_name": "stsb",
+          "features": [
+            {
+              "name": "sentence1",
+              "dtype": "string"
+            },
+            {
+              "name": "sentence2",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": "float32"
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 754791,
+              "num_examples": 5749
+            },
+            {
+              "name": "validation",
+              "num_bytes": 216064,
+              "num_examples": 1500
+            },
+            {
+              "name": "test",
+              "num_bytes": 169974,
+              "num_examples": 1379
+            }
+          ],
+          "download_size": 766983,
+          "dataset_size": 1140829
+        },
+        {
+          "config_name": "wnli",
+          "features": [
+            {
+              "name": "sentence1",
+              "dtype": "string"
+            },
+            {
+              "name": "sentence2",
+              "dtype": "string"
+            },
+            {
+              "name": "label",
+              "dtype": {
+                "class_label": {
+                  "names": {
+                    "0": "not_entailment",
+                    "1": "entailment"
+                  }
+                }
+              }
+            },
+            {
+              "name": "idx",
+              "dtype": "int32"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 107109,
+              "num_examples": 635
+            },
+            {
+              "name": "validation",
+              "num_bytes": 12162,
+              "num_examples": 71
+            },
+            {
+              "name": "test",
+              "num_bytes": 37889,
+              "num_examples": 146
+            }
+          ],
+          "download_size": 63522,
+          "dataset_size": 157160
+        }
+      ],
+      "configs": [
+        {
+          "config_name": "ax",
+          "data_files": [
+            {
+              "split": "test",
+              "path": "ax/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "cola",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "cola/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "cola/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "cola/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "mnli",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "mnli/train-*"
+            },
+            {
+              "split": "validation_matched",
+              "path": "mnli/validation_matched-*"
+            },
+            {
+              "split": "validation_mismatched",
+              "path": "mnli/validation_mismatched-*"
+            },
+            {
+              "split": "test_matched",
+              "path": "mnli/test_matched-*"
+            },
+            {
+              "split": "test_mismatched",
+              "path": "mnli/test_mismatched-*"
+            }
+          ]
+        },
+        {
+          "config_name": "mnli_matched",
+          "data_files": [
+            {
+              "split": "validation",
+              "path": "mnli_matched/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "mnli_matched/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "mnli_mismatched",
+          "data_files": [
+            {
+              "split": "validation",
+              "path": "mnli_mismatched/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "mnli_mismatched/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "mrpc",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "mrpc/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "mrpc/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "mrpc/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "qnli",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "qnli/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "qnli/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "qnli/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "qqp",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "qqp/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "qqp/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "qqp/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "rte",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "rte/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "rte/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "rte/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "sst2",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "sst2/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "sst2/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "sst2/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "stsb",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "stsb/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "stsb/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "stsb/test-*"
+            }
+          ]
+        },
+        {
+          "config_name": "wnli",
+          "data_files": [
+            {
+              "split": "train",
+              "path": "wnli/train-*"
+            },
+            {
+              "split": "validation",
+              "path": "wnli/validation-*"
+            },
+            {
+              "split": "test",
+              "path": "wnli/test-*"
+            }
+          ]
+        }
+      ],
+      "train-eval-index": [
+        {
+          "config": "cola",
+          "task": "text-classification",
+          "task_id": "binary_classification",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence": "text",
+            "label": "target"
+          }
+        },
+        {
+          "config": "sst2",
+          "task": "text-classification",
+          "task_id": "binary_classification",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence": "text",
+            "label": "target"
+          }
+        },
+        {
+          "config": "mrpc",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence1": "text1",
+            "sentence2": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "qqp",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "question1": "text1",
+            "question2": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "stsb",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence1": "text1",
+            "sentence2": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "mnli",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation_matched"
+          },
+          "col_mapping": {
+            "premise": "text1",
+            "hypothesis": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "mnli_mismatched",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "premise": "text1",
+            "hypothesis": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "mnli_matched",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "premise": "text1",
+            "hypothesis": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "qnli",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "question": "text1",
+            "sentence": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "rte",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence1": "text1",
+            "sentence2": "text2",
+            "label": "target"
+          }
+        },
+        {
+          "config": "wnli",
+          "task": "text-classification",
+          "task_id": "natural_language_inference",
+          "splits": {
+            "train_split": "train",
+            "eval_split": "validation"
+          },
+          "col_mapping": {
+            "sentence1": "text1",
+            "sentence2": "text2",
+            "label": "target"
+          }
+        }
+      ]
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "ax/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "cola/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "cola/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "cola/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli/test_matched-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli/test_mismatched-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli/validation_matched-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli/validation_mismatched-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli_matched/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli_matched/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli_mismatched/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mnli_mismatched/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mrpc/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mrpc/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "mrpc/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qnli/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qnli/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qnli/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qqp/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qqp/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "qqp/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "rte/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "rte/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "rte/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "sst2/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "sst2/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "sst2/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "stsb/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "stsb/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "stsb/validation-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "wnli/test-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "wnli/train-00000-of-00001.parquet"
+      },
+      {
+        "rfilename": "wnli/validation-00000-of-00001.parquet"
+      }
+    ]
+  },
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_dataset_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_spaces_search.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_spaces_search.py
+--- INPUT (snippet) ---
+tool.forward(
+        query="document Q&A",
+        sort="likes",
+        direction="descending",
+        limit=5,
+    )
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [],
+  "status": 200,
+  "error": "",
+  "params": {
+    "search": "document Q&A",
+    "sort": "likes",
+    "direction": "descending",
+    "limit": 5
+  }
+}
+--- STDERR ---
+
+[OK] test_hf_spaces_search.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_space_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_space_info.py
+--- INPUT (snippet) ---
+tool.forward(repo_id=repo_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        # Fallback: encode to UTF-8 to avoid Windows cp1252 issues
+        try:
+            print(result_json_str.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
+        except Exception:
+            print("<unprintable> due to encoding error")
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+<unprintable> due to encoding error
+--- STDERR ---
+
+[OK] test_hf_space_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_user_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_user_info.py
+--- INPUT (snippet) ---
+tool.forward(username=username)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {},
+  "status": 404,
+  "error": "http_404",
+  "visibility": "public",
+  "access": "no_access"
+}
+--- STDERR ---
+
+[OK] test_hf_user_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_collections_list.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_collections_list.py
+--- INPUT (snippet) ---
+tool.forward(owner=None)  # or set an owner like "huggingface"
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [
+    {
+      "type": "collection",
+      "id": "deepseek-ai/deepseek-v31-68a491bed32bd77e7fca048f",
+      "owner": "deepseek-ai",
+      "title": "DeepSeek-V3.1",
+      "url": "https://huggingface.co/collections/deepseek-ai/deepseek-ai/deepseek-v31-68a491bed32bd77e7fca048f",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "facebook/dinov3-68924841bd6b561778e31009",
+      "owner": "facebook",
+      "title": "DINOv3",
+      "url": "https://huggingface.co/collections/facebook/facebook/dinov3-68924841bd6b561778e31009",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "AIDC-AI/ovis25-689ec1474633b2aab8809335",
+      "owner": "AIDC-AI",
+      "title": "Ovis2.5",
+      "url": "https://huggingface.co/collections/AIDC-AI/AIDC-AI/ovis25-689ec1474633b2aab8809335",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "nvidia/nvidia-nemotron-689f6d6e6ead8e77dd641615",
+      "owner": "nvidia",
+      "title": "NVIDIA Nemotron",
+      "url": "https://huggingface.co/collections/nvidia/nvidia/nvidia-nemotron-689f6d6e6ead8e77dd641615",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "ByteDance-Seed/seed-oss-68a609f4201e788db05b5dcd",
+      "owner": "ByteDance-Seed",
+      "title": "Seed-OSS",
+      "url": "https://huggingface.co/collections/ByteDance-Seed/ByteDance-Seed/seed-oss-68a609f4201e788db05b5dcd",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "google/gemma-3-release-67c6c6f89c4f76621268bb6d",
+      "owner": "google",
+      "title": "Gemma 3 Release",
+      "url": "https://huggingface.co/collections/google/google/gemma-3-release-67c6c6f89c4f76621268bb6d",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "openai/gpt-oss-68911959590a1634ba11c7a4",
+      "owner": "openai",
+      "title": "gpt-oss",
+      "url": "https://huggingface.co/collections/openai/openai/gpt-oss-68911959590a1634ba11c7a4",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "Qwen/qwen3-67dd247413f0e2e4f653967f",
+      "owner": "Qwen",
+      "title": "Qwen3",
+      "url": "https://huggingface.co/collections/Qwen/Qwen/qwen3-67dd247413f0e2e4f653967f",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "nvidia/nemotron-pre-training-dataset-689d9de36f84279d83786b35",
+      "owner": "nvidia",
+      "title": "Nemotron-Pre-Training-Dataset",
+      "url": "https://huggingface.co/collections/nvidia/nvidia/nemotron-pre-training-dataset-689d9de36f84279d83786b35",
+      "visibility": "public",
+      "access": "accessible"
+    },
+    {
+      "type": "collection",
+      "id": "inclusionAI/ui-venus-689f2fb01a4234cbce91c56a",
+      "owner": "inclusionAI",
+      "title": "UI-Venus",
+      "url": "https://huggingface.co/collections/inclusionAI/inclusionAI/ui-venus-689f2fb01a4234cbce91c56a",
+      "visibility": "public",
+      "access": "accessible"
+    }
+  ],
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_collections_list.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_collection_get.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_collection_get.py
+--- INPUT (snippet) ---
+tool.forward(namespace=namespace, slug_id=slug_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {},
+  "status": 404,
+  "error": "http_404"
+}
+--- STDERR ---
+
+[OK] test_hf_collection_get.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_paper_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_paper_info.py
+--- INPUT (snippet) ---
+tool.forward(arxiv_id=arxiv_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {
+    "id": "1706.03762",
+    "authors": [
+      {
+        "_id": "6411c77d6b75ddced38902b6",
+        "user": {
+          "_id": "60fe1b231a3e6f5129776bf9",
+          "avatarUrl": "/avatars/c80edad5267c6ed9ecde9b056993d5c3.svg",
+          "isPro": false,
+          "fullname": "Ashish Vaswani",
+          "user": "ashishvaswanigoogle",
+          "type": "user"
+        },
+        "name": "Ashish Vaswani",
+        "status": "extracted_pending",
+        "statusLastChangedAt": "2023-03-15T09:40:25.803Z",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902b7",
+        "name": "Noam Shazeer",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902b8",
+        "user": {
+          "_id": "60fee8e1465daccb9f332e2f",
+          "avatarUrl": "/avatars/ea92bf15e181b4f13a70f18ee3ba7a51.svg",
+          "isPro": false,
+          "fullname": "Niki Parmar",
+          "user": "nikip",
+          "type": "user"
+        },
+        "name": "Niki Parmar",
+        "status": "extracted_pending",
+        "statusLastChangedAt": "2023-03-15T09:40:25.803Z",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902b9",
+        "name": "Jakob Uszkoreit",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902ba",
+        "name": "Llion Jones",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902bb",
+        "name": "Aidan N. Gomez",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902bc",
+        "name": "Lukasz Kaiser",
+        "hidden": false
+      },
+      {
+        "_id": "6411c77d6b75ddced38902bd",
+        "name": "Illia Polosukhin",
+        "hidden": false
+      }
+    ],
+    "publishedAt": "2017-06-12T17:57:34.000Z",
+    "title": "Attention Is All You Need",
+    "summary": "The dominant sequence transduction models are based on complex recurrent or\nconvolutional neural networks in an encoder-decoder configuration. The best\nperforming models also connect the encoder and decoder through an attention\nmechanism. We propose a new simple network architecture, the Transformer, based\nsolely on attention mechanisms, dispensing with recurrence and convolutions\nentirely. Experiments on two machine translation tasks show these models to be\nsuperior in quality while being more parallelizable and requiring significantly\nless time to train. Our model achieves 28.4 BLEU on the WMT 2014\nEnglish-to-German translation task, improving over the existing best results,\nincluding ensembles by over 2 BLEU. On the WMT 2014 English-to-French\ntranslation task, our model establishes a new single-model state-of-the-art\nBLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction\nof the training costs of the best models from the literature. We show that the\nTransformer generalizes well to other tasks by applying it successfully to\nEnglish constituency parsing both with large and limited training data.",
+    "upvotes": 79,
+    "discussionId": "641192343ea54b1aa7e2f084",
+    "ai_summary": "The Transformer architecture, based purely on attention mechanisms, achieves superior performance on machine translation and parsing tasks with improved parallelizability and reduced training time.",
+    "ai_keywords": [
+      "recurrent neural networks",
+      "convolutional neural networks",
+      "encoder-decoder configuration",
+      "attention mechanism",
+      "Transformer",
+      "BLEU score",
+      "WMT 2014 English-to-German translation",
+      "WMT 2014 English-to-French translation",
+      "English constituency parsing"
+    ]
+  },
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_paper_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_paper_repos.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_paper_repos.py
+--- INPUT (snippet) ---
+tool.forward(arxiv_id=arxiv_id)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [],
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_paper_repos.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_daily_papers.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_daily_papers.py
+--- INPUT (snippet) ---
+tool.forward()
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        try:
+            print(result_json_str.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
+        except Exception:
+            print("<unprintable> due to encoding error")
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+<unprintable> due to encoding error
+--- STDERR ---
+
+[OK] test_hf_daily_papers.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_repo_info.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_repo_info.py
+--- INPUT (snippet) ---
+tool.forward(repo_type="model", repo_id="bert-base-uncased")
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "item": {
+    "_id": "621ffdc036468d709f174338",
+    "id": "google-bert/bert-base-uncased",
+    "private": false,
+    "pipeline_tag": "fill-mask",
+    "library_name": "transformers",
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "jax",
+      "rust",
+      "coreml",
+      "onnx",
+      "safetensors",
+      "bert",
+      "fill-mask",
+      "exbert",
+      "en",
+      "dataset:bookcorpus",
+      "dataset:wikipedia",
+      "arxiv:1810.04805",
+      "license:apache-2.0",
+      "autotrain_compatible",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "downloads": 52064840,
+    "likes": 2385,
+    "modelId": "google-bert/bert-base-uncased",
+    "author": "google-bert",
+    "sha": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "lastModified": "2024-02-19T11:06:12.000Z",
+    "gated": false,
+    "disabled": false,
+    "mask_token": "[MASK]",
+    "widgetData": [
+      {
+        "text": "Paris is the [MASK] of France."
+      },
+      {
+        "text": "The goal of life is [MASK]."
+      }
+    ],
+    "model-index": null,
+    "config": {
+      "architectures": [
+        "BertForMaskedLM"
+      ],
+      "model_type": "bert",
+      "tokenizer_config": {}
+    },
+    "cardData": {
+      "language": "en",
+      "tags": [
+        "exbert"
+      ],
+      "license": "apache-2.0",
+      "datasets": [
+        "bookcorpus",
+        "wikipedia"
+      ]
+    },
+    "transformersInfo": {
+      "auto_model": "AutoModelForMaskedLM",
+      "pipeline_tag": "fill-mask",
+      "processor": "AutoTokenizer"
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "LICENSE"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "config.json"
+      },
+      {
+        "rfilename": "coreml/fill-mask/float32_model.mlpackage/Data/com.apple.CoreML/model.mlmodel"
+      },
+      {
+        "rfilename": "coreml/fill-mask/float32_model.mlpackage/Data/com.apple.CoreML/weights/weight.bin"
+      },
+      {
+        "rfilename": "coreml/fill-mask/float32_model.mlpackage/Manifest.json"
+      },
+      {
+        "rfilename": "flax_model.msgpack"
+      },
+      {
+        "rfilename": "model.onnx"
+      },
+      {
+        "rfilename": "model.safetensors"
+      },
+      {
+        "rfilename": "pytorch_model.bin"
+      },
+      {
+        "rfilename": "rust_model.ot"
+      },
+      {
+        "rfilename": "tf_model.h5"
+      },
+      {
+        "rfilename": "tokenizer.json"
+      },
+      {
+        "rfilename": "tokenizer_config.json"
+      },
+      {
+        "rfilename": "vocab.txt"
+      }
+    ],
+    "spaces": [
+      "mteb/leaderboard",
+      "microsoft/HuggingGPT",
+      "Vision-CAIR/minigpt4",
+      "lnyan/stablediffusion-infinity",
+      "multimodalart/latentdiffusion",
+      "mrfakename/MeloTTS",
+      "Salesforce/BLIP",
+      "shi-labs/Versatile-Diffusion",
+      "yizhangliu/Grounded-Segment-Anything",
+      "stepfun-ai/Step1X-Edit",
+      "H-Liu1997/TANGO",
+      "xinyu1205/recognize-anything",
+      "cvlab/zero123-live",
+      "hilamanor/audioEditing",
+      "alexnasa/Chain-of-Zoom",
+      "AIGC-Audio/AudioGPT",
+      "Audio-AGI/AudioSep",
+      "m-ric/chunk_visualizer",
+      "jadechoghari/OpenMusic",
+      "DAMO-NLP-SG/Video-LLaMA",
+      "gligen/demo",
+      "declare-lab/mustango",
+      "Yiwen-ntu/MeshAnything",
+      "exbert-project/exbert",
+      "shgao/EditAnything",
+      "LiruiZhao/Diffree",
+      "Vision-CAIR/MiniGPT-v2",
+      "Yuliang/ECON",
+      "nikigoli/countgd",
+      "THUdyh/Oryx",
+      "IDEA-Research/Grounded-SAM",
+      "Awiny/Image2Paragraph",
+      "ShilongLiu/Grounding_DINO_demo",
+      "OpenSound/CapSpeech-TTS",
+      "merve/Grounding_DINO_demo",
+      "yangheng/Super-Resolution-Anime-Diffusion",
+      "liuyuan-pal/SyncDreamer",
+      "XiangJinYu/SPO",
+      "sam-hq-team/sam-hq",
+      "haotiz/glip-zeroshot-demo",
+      "TencentARC/BrushEdit",
+      "Nick088/Audio-SR",
+      "nateraw/lavila",
+      "abyildirim/inst-inpaint",
+      "Yiwen-ntu/MeshAnythingV2",
+      "Pinwheel/GLIP-BLIP-Object-Detection-VQA",
+      "Junfeng5/GLEE_demo",
+      "shi-labs/Matting-Anything",
+      "fffiloni/Video-Matting-Anything",
+      "burtenshaw/autotrain-mcp",
+      "Vision-CAIR/MiniGPT4-video",
+      "linfanluntan/Grounded-SAM",
+      "magicr/BuboGPT",
+      "WensongSong/Insert-Anything",
+      "nvidia/audio-flamingo-2",
+      "multimodalart/MoDA-fast-talking-head",
+      "clip-italian/clip-italian-demo",
+      "OpenGVLab/InternGPT",
+      "mteb/leaderboard_legacy",
+      "hongfz16/3DTopia",
+      "yenniejun/tokenizers-languages",
+      "mmlab-ntu/relate-anything-model",
+      "amphion/PicoAudio",
+      "byeongjun-park/HarmonyView",
+      "keras-io/bert-semantic-similarity",
+      "MirageML/sjc",
+      "fffiloni/vta-ldm",
+      "NAACL2022/CLIP-Caption-Reward",
+      "society-ethics/model-card-regulatory-check",
+      "fffiloni/miniGPT4-Video-Zero",
+      "AIGC-Audio/AudioLCM",
+      "Gladiator/Text-Summarizer",
+      "SVGRender/DiffSketcher",
+      "ethanchern/Anole",
+      "LittleFrog/IntrinsicAnything",
+      "milyiyo/reimagine-it",
+      "ysharma/text-to-image-to-video",
+      "OpenGVLab/VideoChatGPT",
+      "acmc/whatsapp-chats-finetuning-formatter",
+      "ZebangCheng/Emotion-LLaMA",
+      "zakaria-narjis/photo-enhancer",
+      "kaushalya/medclip-roco",
+      "AIGC-Audio/Make_An_Audio",
+      "avid-ml/bias-detection",
+      "sonalkum/GAMA",
+      "topdu/OpenOCR-Demo",
+      "RitaParadaRamos/SmallCapDemo",
+      "llizhx/TinyGPT-V",
+      "codelion/Grounding_DINO_demo",
+      "flosstradamus/FluxMusicGUI",
+      "bartar/tokenizers",
+      "Tinkering/Pytorch-day-prez",
+      "sasha/BiasDetection",
+      "Pusheen/LoCo",
+      "Jingkang/EgoGPT-7B",
+      "flax-community/koclip",
+      "TencentARC/VLog",
+      "ynhe/AskAnything",
+      "Volkopat/SegmentAnythingxGroundingDINO",
+      "phyloforfun/VoucherVision"
+    ],
+    "createdAt": "2022-03-02T23:29:04.000Z",
+    "safetensors": {
+      "parameters": {
+        "F32": 110106428
+      },
+      "total": 110106428
+    },
+    "inference": "warm",
+    "usedStorage": 13397387509
+  },
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_repo_info.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_site_search.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_site_search.py
+--- INPUT (snippet) ---
+tool.forward(query="fine-tuning tutorial", limit=5)
+    try:
+        data = json.loads(result_json_str)
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+    except Exception:
+        print(result_json_str)
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+{
+  "results": [
+    {
+      "type": "site",
+      "title": "Fine-tuning - Hugging Face",
+      "url": "https://huggingface.co/docs/transformers/training",
+      "snippet": "Fine-tuning adapts a pretrained model to a specific task with a smaller specialized dataset. This approach requires far less data and compute compared to training a model from scratch, which makes it a more accessible option for many users. Transformers provides the Trainer API, which offers a comprehensive set of training features, for fine-tuning any of the models on the Hub.",
+      "date": null
+    },
+    {
+      "type": "site",
+      "title": "Fine-tune a pretrained model - Hugging Face",
+      "url": "https://huggingface.co/docs/transformers/v4.18.0/en/training",
+      "snippet": "Before you can fine-tune a pretrained model, download a dataset and prepare it for training. The previous tutorial showed you how to process data for training, and now you get an opportunity to put those skills to the test!",
+      "date": null
+    },
+    {
+      "type": "site",
+      "title": "Let's Fine-Tune Your Model for Function-Calling - Hugging Face",
+      "url": "https://huggingface.co/learn/agents-course/bonus-unit1/fine-tuning",
+      "snippet": "In this tutorial, we will build a function-calling model based on google/gemma-2-2b-it. We choose the fine-tuned model google/gemma-2-2b-it instead of the base model google/gemma-2-2b because the fine-tuned model has been improved for our use-case.",
+      "date": null
+    },
+    {
+      "type": "site",
+      "title": "Fine-Tuning a Vision Language Model (Qwen2-VL-7B) with the Hugging Face ...",
+      "url": "https://huggingface.co/learn/cookbook/fine_tuning_vlm_trl",
+      "snippet": "Phil Schmid's tutorial: an excellent deep dive into fine-tuning multimodal LLMs with TRL. Merve Noyan's smol-vision repository: a collection of engaging notebooks on cutting-edge vision and multimodal AI topics.",
+      "date": null
+    },
+    {
+      "type": "site",
+      "title": "Fine-tuning a pretrained model - Hugging Face",
+      "url": "https://huggingface.co/docs/transformers/v4.15.0/training",
+      "snippet": "In this tutorial, we will show you how to fine-tune a pretrained model from the Transformers library. In TensorFlow, models can be directly trained using Keras and the fit method.",
+      "date": null
+    }
+  ],
+  "status": 200,
+  "error": ""
+}
+--- STDERR ---
+
+[OK] test_hf_site_search.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_report_generate.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_report_generate.py
+--- INPUT (snippet) ---
+tool.forward(data_json=json.dumps(data), title="Test Report")
+    print(html[:500])  # print first 500 chars
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test Report</title>
+  <style>
+    :root { --bg:#0b0d12; --fg:#e6e9ef; --muted:#9aa4b2; --card:#121621; --accent:#5ac8fa; --warn:#eab308; }
+    body { background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; margin:0; padding:24px; }
+    h1 { font-size: 24px; margin: 0 0 
+--- STDERR ---
+
+[OK] test_hf_report_generate.py
+--------------------------------------------------------------------------------
+
+=== Running test_hf_generate_dashboard_report.py ===
+Command: C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\venv\Scripts\python.exe C:\Users\daqc\Documents\GitHub\open-deep-research-vulnerability-intelligence\tests\test_hf_generate_dashboard_report.py
+--- INPUT (snippet) ---
+tool.forward(query="semantic search", limit=5)
+    print(html[:500])  # print first 500 chars
+
+
+if __name__ == "__main__":
+    main()
+
+
+--- STDOUT ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hugging Search � Dashboard</title>
+  <style>
+    :root { --bg:#0b0d12; --fg:#e6e9ef; --muted:#9aa4b2; --card:#121621; --accent:#5ac8fa; --warn:#eab308; }
+    body { background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; margin:0; padding:24px; }
+    .container { max-wi
+--- STDERR ---
+
+[OK] test_hf_generate_dashboard_report.py
+--------------------------------------------------------------------------------
+
