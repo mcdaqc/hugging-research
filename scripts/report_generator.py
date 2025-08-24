@@ -25,6 +25,7 @@ class HFLinkReportTool(Tool):
             import json as _json
             doc_title = title or "Report"
             query = (query or "").strip()
+            header_html = f"<div class=\"header\"><div><div class=\"title\">{title}</div></div></div>" if title else ""
 
             # Extract URLs
             urls = re.findall(r"https?://[^\s)\]]+", final_answer or "")
@@ -129,7 +130,7 @@ class HFLinkReportTool(Tool):
   <script src=\"https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js\"></script>
 </head>
 <body>
-  <div class=\"container\">{('<div class=\\"header\\"><div><div class=\\"title\\">' + title + '</div></div></div>') if title else ''}
+  <div class=\"container\">{header_html}
     <h2>You may be interested <span class=\"warn\" title=\"Links may be AI‑generated and might not resolve.\">⚠️</span></h2>
     <div class=\"stats\">{chips_section()}</div>
     {section('Models', cats['models'], 'models')}
