@@ -4,6 +4,10 @@
 </p>
 <h1 align="center">Hugging Research</h1>
 
+<p align="center">
+  <a href="https://huggingface.co/spaces/daqc/hugging-research"><img src="https://img.shields.io/badge/Open%20in%20Spaces-blue?logo=huggingface" alt="Open in Hugging Face Spaces" /></a>
+</p>
+
 Hugging Research is a lightweight CodeAgent‑based research assistant for the Hugging Face Hub (models, datasets, Spaces, users, collections, papers). It gathers links via dedicated tools and organizes them for easy review.
 
 ![screenshot](assets/images/ss1.png)
